@@ -17,7 +17,10 @@ const Button = (props) =>{
 // implemented StatisticLine component
 const StatisticLine = (props) => {
   return(
-    <p>{props.text}: {props.value}</p>
+    <tr>
+    <td>{props.text}</td>
+    <td>{props.value}</td>
+    </tr>
   )
 
 
@@ -32,16 +35,19 @@ const Statistics = (props) => {
     return <p>No feedback given</p>
   }
  return(
-  <div>
-    <h2>Statistics</h2>
-    {/* StatisticLine component Mounted*/}
-    <StatisticLine text = "good" value={props.good}/>
+  <table>
+    <tbody>
+   <tr>
+    <td><h2>Statistics</h2></td>
+   </tr>
+    <StatisticLine text = "good" value={props.good}/> 
     <StatisticLine text = "neutral" value={props.neutral}/>
     <StatisticLine text = "bad" value={props.bad}/>
     <StatisticLine text = "all" value={all}/>
     <StatisticLine text = "average" value={average}/>
     <StatisticLine text = "positive" value={percentage + " %"}/>
-  </div>
+    </tbody>
+  </table>
  )
 }
 
