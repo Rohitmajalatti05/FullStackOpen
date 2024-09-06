@@ -13,6 +13,7 @@ const Button = (props) =>{
     </div>
   )
 }
+// I have already created the Statistics component from the beginning.
 const Statistics = (props) => {
  return(
   <div>
